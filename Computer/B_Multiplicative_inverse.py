@@ -67,11 +67,6 @@ def multi_inverse(a,b):
     return (final, gcd)
 
 
-_ ,gcd = multi_inverse(6, 2)
-print(gcd)
-
-print(numbers[-2])
-
 def modInverse(a, m):
     """
         Args:
@@ -109,13 +104,13 @@ def modInverse(a, m):
         while (a > 1):
     
             # q is quotient
-            m1 = m
+            m_initial = m
             m, q = mod(a,m)
-            a = m1
-            t = y
+            a = m_initial
+            y_initial = y
             # Update x and y
             y = x - q * y
-            x = t
+            x = y_initial
     
         # Make x positive
         if (x < 0):
@@ -123,4 +118,4 @@ def modInverse(a, m):
     
         return x
  
-print(modInverse(2,7))
+# print(modInverse(2,7))
